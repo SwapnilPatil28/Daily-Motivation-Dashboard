@@ -16,7 +16,7 @@ function SearchBox({ searchText, setSearchText }) {
         onChange={function (e) {
           setSearchText(e.target.value)
         }}
-        className="w-full pl-12 pr-4 py-4 bg-white dark:bg-gray-800 border-2 border-purple-200 dark:border-gray-700 rounded-xl text-gray-800 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 shadow-sm"
+        className="w-full pl-12 pr-4 py-3 sm:py-4 bg-white dark:bg-gray-800 border-2 border-purple-200 dark:border-gray-700 rounded-xl text-sm sm:text-base text-gray-800 dark:text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 shadow-sm"
       />
     </div>
   )

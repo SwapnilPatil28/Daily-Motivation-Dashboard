@@ -23,12 +23,12 @@ function LikedQuotes({ likedQuotes, setLikedQuotes }) {
   })
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 dark:from-red-400 dark:via-pink-400 dark:to-purple-400 bg-clip-text text-transparent mb-4">
+    <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+      <div className="text-center mb-8 sm:mb-10">
+        <h2 className="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 dark:from-red-400 dark:via-pink-400 dark:to-purple-400 bg-clip-text text-transparent mb-3 sm:mb-4 leading-tight">
           ❤️ All Liked Quotes
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg">
           Your collection of inspiration
         </p>
       </div>
@@ -59,17 +59,17 @@ function LikedQuotes({ likedQuotes, setLikedQuotes }) {
                 key={obj._id}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl p-6 sm:p-8 border border-pink-100 dark:border-gray-700 transform hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex flex-col sm:flex-row items-start gap-4">
                   <div className="flex-shrink-0">
                     <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white text-xl">
                       ❤️
                     </div>
                   </div>
                   <div className="flex-1">
-                    <p className="text-lg sm:text-xl font-serif text-gray-800 dark:text-gray-100 leading-relaxed mb-3 italic">
+                    <p className="text-base sm:text-xl font-serif text-gray-800 dark:text-gray-100 leading-relaxed mb-3 italic">
                       "{obj.content}"
                     </p>
-                    <p className="text-gray-600 dark:text-gray-400 font-medium">
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 font-medium">
                       — {obj.author}
                     </p>
                   </div>
@@ -77,7 +77,7 @@ function LikedQuotes({ likedQuotes, setLikedQuotes }) {
                     onClick={function () {
                       handleDeleteQuote(obj._id)
                     }}
-                    className="ml-2 h-9 w-9 rounded-full border border-red-200 text-red-500 hover:bg-red-50 dark:border-red-900/60 dark:text-red-400 dark:hover:bg-red-900/20 transition-colors duration-200"
+                    className="self-end sm:self-auto h-9 w-9 rounded-full border border-red-200 text-red-500 hover:bg-red-50 dark:border-red-900/60 dark:text-red-400 dark:hover:bg-red-900/20 transition-colors duration-200"
                     aria-label="Delete liked quote"
                     title="Delete quote"
                   >
