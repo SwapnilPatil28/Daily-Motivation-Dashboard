@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 
+// Quote card: fetches random quote and supports like/unlike.
 function QuoteBox({ likedQuotes, setLikedQuotes }) {
     const[quote, setQuote] = useState('');
     const[author, setAuthor] = useState('');
     const[quoteId, setQuoteId] = useState('');
     const[loading, setloading] = useState(true);
 
+    // Fetch a random quote from API.
     async function fetchQuote()
     {
         try {
@@ -25,10 +27,12 @@ function QuoteBox({ likedQuotes, setLikedQuotes }) {
         }
     }
 
+    // Load one quote when component mounts.
     useEffect(() => {
         fetchQuote();
     }, []);
 
+    // Toggle current quote in liked list.
     function handleLikeToggle()
     {
         if (!quoteId) {

@@ -1,5 +1,6 @@
 import QuoteBox from './QuoteBox'
 
+// Home page section with heading + current quote card.
 function Home({ likedQuotes, setLikedQuotes }) {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -11,6 +12,7 @@ function Home({ likedQuotes, setLikedQuotes }) {
           Get inspired with powerful quotes every day ✨
         </p>
       </div>
+      {/* Quote box handles fetch + like logic */}
       <QuoteBox likedQuotes={likedQuotes} setLikedQuotes={setLikedQuotes} />
     </div>
   )

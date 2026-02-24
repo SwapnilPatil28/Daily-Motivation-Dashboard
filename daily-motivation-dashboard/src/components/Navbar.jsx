@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 
+// Top navigation with route links and dark/light toggle.
 function Navbar({ darkMode, setDarkMode }) {
   return (
     <nav className="sticky top-0 z-50 backdrop-blur-lg bg-white/80 dark:bg-gray-900/80 border-b border-purple-200 dark:border-gray-700 shadow-sm transition-colors duration-300">
@@ -17,6 +18,7 @@ function Navbar({ darkMode, setDarkMode }) {
           </div>
           
           <div className="flex items-center space-x-6">
+            {/* Main navigation links */}
             <div className="flex items-center space-x-4">
               <Link 
                 to="/" 
@@ -32,6 +34,7 @@ function Navbar({ darkMode, setDarkMode }) {
               </Link>
             </div>
             
+            {/* Theme toggle button */}
             <button
               onClick={function() { setDarkMode(!darkMode) }}
               className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"

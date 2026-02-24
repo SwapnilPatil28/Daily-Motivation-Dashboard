@@ -1,3 +1,4 @@
+// Footer showing total number of liked quotes.
 function LikeCountFooter({ likedCount }) {
   return (
     <footer className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-lg border-t border-purple-200 dark:border-gray-700 mt-20 transition-colors duration-300">
@@ -7,6 +8,7 @@ function LikeCountFooter({ likedCount }) {
             <span className="text-white text-xl">❤️</span>
           </div>
           <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+            {/* Live liked quotes count */}
             Total Liked Quotes: 
             <span className="ml-2 text-2xl bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
               {likedCount}

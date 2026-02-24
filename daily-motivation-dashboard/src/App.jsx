@@ -5,11 +5,14 @@ import Navbar from "./components/Navbar"
 import LikedQuotes from "./components/LikedQuotes"
 import LikeCountFooter from "./components/LikeCountFooter"
 
+// Main app: handles global state, routing, and persistence.
 function App() {
+  // Global app state
   const [likedQuotes, setLikedQuotes] = useState([])
   const [darkMode, setDarkMode] = useState(true)
   const themePreferenceKey = "themePreference"
 
+  // Load saved likes and theme on first render.
   useEffect(function () {
     const savedLikes = localStorage.getItem("likedQuotes")
     if (savedLikes) {
@@ -21,10 +24,12 @@ function App() {
     }
   }, [])
 
+  // Save liked quotes whenever they change.
   useEffect(function () {
     localStorage.setItem("likedQuotes", JSON.stringify(likedQuotes))
   }, [likedQuotes])
 
+  // Save theme preference whenever toggle changes.
   useEffect(function () {
     localStorage.setItem(themePreferenceKey, JSON.stringify(darkMode))
   }, [darkMode])

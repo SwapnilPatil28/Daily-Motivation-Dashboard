@@ -150,19 +150,7 @@ Since this is frontend-only, Vercel is sufficient.
 
 Add your deployed Vercel URL here:
 
-- Vercel Link: `https://your-project-name.vercel.app`
-
-## `.gitignore` Status
-
-The repository now has a root `.gitignore` to ignore:
-
-- `node_modules` at root and app level
-- build outputs (`dist`)
-- logs
-- local env files
-- editor/OS artifacts
-
-The app folder also has its own `.gitignore` from Vite.
+- Vercel Link: https://daily-motivation-dashboard.vercel.app/
 
 ## Current Completion Status
 

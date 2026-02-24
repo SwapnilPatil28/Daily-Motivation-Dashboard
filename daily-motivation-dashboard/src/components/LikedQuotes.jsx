@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import SearchBox from './SearchBox'
 
+// Liked quotes page with search and delete support.
 function LikedQuotes({ likedQuotes, setLikedQuotes }) {
   const [searchText, setSearchText] = useState('')
 
+  // Remove one quote from liked list.
   function handleDeleteQuote(quoteId) {
     const updatedLikes = likedQuotes.filter(function (obj) {
       return obj._id !== quoteId
@@ -11,6 +13,7 @@ function LikedQuotes({ likedQuotes, setLikedQuotes }) {
     setLikedQuotes(updatedLikes)
   }
 
+  // Filter by quote text or author.
   const filteredQuotes = likedQuotes.filter(function (obj) {
     const quoteText = obj.content.toLowerCase()
     const authorText = obj.author.toLowerCase()
@@ -34,6 +37,7 @@ function LikedQuotes({ likedQuotes, setLikedQuotes }) {
         <SearchBox searchText={searchText} setSearchText={setSearchText} />
       </div>
 
+      {/* Empty + filtered empty states */}
       {likedQuotes.length === 0 ? (
         <div className="text-center py-20">
           <div className="text-6xl mb-4">💔</div>
@@ -47,6 +51,7 @@ function LikedQuotes({ likedQuotes, setLikedQuotes }) {
           <p className="text-gray-500 dark:text-gray-500 mt-2">Try a different search term.</p>
         </div>
       ) : (
+        // Render liked quotes list
         <div className="grid gap-6">
           {filteredQuotes.map(function (obj) {
             return (
