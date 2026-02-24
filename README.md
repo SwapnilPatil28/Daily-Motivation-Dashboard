@@ -92,7 +92,7 @@ Daily-Motivation-Dashboard/
 
 ## API Notes
 
-- Endpoint used: `https://api.quotable.io/random`
+- Endpoint used: `http://api.quotable.io/random`
 - This is called directly from frontend using axios.
 - No API key is currently required by this implementation.
 - Because there is no private secret, `.env` is not needed for the current API usage.

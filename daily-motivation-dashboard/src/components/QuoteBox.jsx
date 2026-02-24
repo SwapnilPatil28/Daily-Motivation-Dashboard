@@ -13,7 +13,7 @@ function QuoteBox({ likedQuotes, setLikedQuotes }) {
     {
         try {
             setloading(true);
-            const response = await axios.get('https://api.quotable.io/random');
+            const response = await axios.get('http://api.quotable.io/random');
             setQuote(response.data?.content || 'No quote found');
             setAuthor(response.data?.author || 'Unknown');
             setQuoteId(response.data?._id || '');
