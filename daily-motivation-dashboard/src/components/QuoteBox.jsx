@@ -13,10 +13,12 @@ function QuoteBox({ likedQuotes, setLikedQuotes }) {
     {
         try {
             setloading(true);
-            const response = await axios.get('https://api.quotable.io/random');
-            setQuote(response.data?.content || 'No quote found');
-            setAuthor(response.data?.author || 'Unknown');
-            setQuoteId(response.data?._id || '');
+            const response = await axios.get('https://dummyjson.com/quotes/random');
+            const quoteText = response.data?.quote || 'No quote found';
+            const authorText = response.data?.author || 'Unknown';
+            setQuote(quoteText);
+            setAuthor(authorText);
+            setQuoteId(response.data?.id ? String(response.data.id) : `${quoteText}-${authorText}`);
         } catch (error) {
             console.error('Error fetching quote:', error);
             setQuote('Failed to fetch quote. Try again.');

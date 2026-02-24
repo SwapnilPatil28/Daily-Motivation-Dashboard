@@ -17,7 +17,7 @@ No backend service is required.
 
 ## Features
 
-- Fetch a random quote from `https://api.quotable.io/random`
+- Fetch a random quote from `https://dummyjson.com/quotes/random`
 - Show loading state while fetching
 - Disable quote actions while loading
 - Like / unlike the current quote
@@ -92,8 +92,8 @@ Daily-Motivation-Dashboard/
 
 ## API Notes
 
-- Endpoint used: `https://api.quotable.io/random`
-- This is called directly from frontend using axios.
+- Endpoint used: `https://dummyjson.com/quotes/random`
+- This endpoint works directly from frontend using axios.
 - No API key is currently required by this implementation.
 - Because there is no private secret, `.env` is not needed for the current API usage.
 
